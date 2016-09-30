@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <?php
-/*$f="c:\\OpenServer\\domains\\php290916\\text.txt";
+$f="c:\\OpenServer\\domains\\php290916\\text.txt";
 $fileowner=fileowner($f);
 echo $fileowner;
 echo "<br>";
@@ -43,9 +43,46 @@ echo "<br>";
 $filemtime=filemtime($f);
 echo $filmetime;
 echo "<br>";
+$fileatime=fileatime($f);
+echo $fileatime;
+echo "<br>";
+$filectime=filectime($f);
+echo $filectime;
+echo "<br>";
+$filetype=filetype($f);
+echo $filetype;
+echo "<br>";
+if (is_file($f))
+	{
+		echo "Это файл";
+	}
+	else
+	{
+		echo "Это не файл";
+	}
+echo "<br>";
+if (is_dir($f))
+	{
+		echo "Это директория";
+	}
+	else
+	{
+		echo "Это не директория";
+	}
+echo "<br>";
+if (is_link($f))
+	{
+		echo "Это ссылка";
+	}
+	else
+	{
+		echo "Это не ссылка";
+	}
+
 echo "<br>";
 echo "<br>";
-*/
+echo "<br>";
+
 function printTree ($level=1){
      $d=@opendir(".");
 	 if (!$d) return;
